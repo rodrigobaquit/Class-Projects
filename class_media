@@ -1,0 +1,44 @@
+//This document was made to calculate the grade of a group of students.
+
+
+var names = ["rodrigo", "Lígia", "Beatriz"];
+var grades1 = [3.2, 6.5, 9.5];
+var grades2 = [10, 8.0, 6.5];
+
+function average(n1, n2){
+return ( n1 + n2)/2
+
+}
+
+function aproved(average){
+
+if(average >7){
+    return "Aproved";
+    } else{
+        return "Reproved";
+    }
+
+
+}
+
+for( var index in names){
+
+    var grade1 = grades1[index]
+    var grade2 = grades2[index]
+    var a = average(grade1, grade2)
+
+console.log(names[index]+ 
+    " - " + 
+    grade1 +
+    " - " + 
+    grade2 + 
+    " - " +
+    a + 
+    " - " + aproved(a))
+
+}
+
+// Expected result
+rodrigo - 3.2 - 10 - 6.6 - Reproved
+Lígia - 6.5 - 8 - 7.25 - Aproved
+Beatriz - 9.5 - 6.5 - 8 - Aproved
